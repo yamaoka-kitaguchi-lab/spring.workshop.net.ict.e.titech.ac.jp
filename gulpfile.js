@@ -47,7 +47,7 @@ gulp.task('reload', () => {
 });
 
 gulp.task('watch', () => {
-  gulp.watch([paths.pug + '**/*.pug', '!' + paths.pug + '**/_*.pug'], gulp.task('build'));
+  gulp.watch([paths.pug + '**/*.pug'], gulp.task('build'));
 });
 
 gulp.task('default', gulp.series(gulp.parallel('browser-sync', 'watch')));
