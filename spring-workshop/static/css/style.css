@@ -1,9 +1,3 @@
 html {
-  font-size: 13px;
-  -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: transparent;
-}
-
-section {
-  margin-bottom: 32px;
+  font-family: 'M PLUS 1p', sans-serif;
 }
