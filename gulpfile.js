@@ -37,9 +37,6 @@ gulp.task('browser-sync', () => {
       index: 'index.html'
     }
   });
-  gulp.watch(paths.dist + '**/*.html', gulp.task('reload'));
-  gulp.watch(paths.dist + '**/*.css', gulp.task('reload'));
-  gulp.watch(paths.dist + '**/*.js', gulp.task('reload'));
 });
 
 gulp.task('reload', () => {
@@ -48,6 +45,9 @@ gulp.task('reload', () => {
 
 gulp.task('watch', () => {
   gulp.watch([paths.pug + '**/*.pug'], gulp.task('build'));
+  gulp.watch(paths.dist + '**/*.html', gulp.task('reload'));
+  gulp.watch(paths.dist + '**/*.css', gulp.task('reload'));
+  gulp.watch(paths.dist + '**/*.js', gulp.task('reload'));
 });
 
 gulp.task('default', gulp.series(gulp.parallel('browser-sync', 'watch')));
