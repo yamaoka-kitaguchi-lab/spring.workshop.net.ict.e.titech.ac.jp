@@ -4,7 +4,11 @@ html(lang="ja")
   head
     include include/_inc_head.pug
   body
-    div(class="container")
+    include include/_inc_navbar.pug
+    div.container
+      include include/_inc_header.pug
       include include/_inc_announce.pug
       include include/_inc_schedule.pug
+      include include/_inc_rule.pug
+      include include/_inc_footer.pug
     include include/_inc_script.pug
