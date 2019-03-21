@@ -13,6 +13,12 @@ section
       tr
         th(scope="row") 交通
         td #{workshop.transport}
+        
+      // 「もし提供されていれば」で条件分岐する
+      tr
+        th(scope="row") 会場Wi-Fi
+        td ESSID：#{workshop.wifi.essid}#[br]パスワード：#{workshop.wifi.password}
+        
       tr
         th(scope="row") 懇親会費
         td 一般：#{workshop.fee.general}#[br]学生：#{workshop.fee.student}#[br]新入生：無料
