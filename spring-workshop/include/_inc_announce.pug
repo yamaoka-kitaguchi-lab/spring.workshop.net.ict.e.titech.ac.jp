@@ -1,18 +1,18 @@
 section
   h2 開催案内
+  p 何かご不明な点がございましたら，お気軽に#[a(href="mailto:"+workshop.contact) 開催事務局]までお問い合わせください．
   table.table
     tbody
       tr
         th(scope="row") 日程
-        td 2019年3月10日
+        td #{workshop.date}
       tr
         th(scope="row") 場所
         td
-          a(href="") 東京工業大学 大岡山キャンパス 南3号館3階300輪講室
+          a(href=workshop.location.url) #{workshop.location.text}
       tr
         th(scope="row") 交通
-        td 東急目黒線大岡山駅より徒歩5分
+        td #{workshop.transport}
       tr
-        th(scope="row") 懇親会参加費
-        td 1000円くらい？
-        
+        th(scope="row") 懇親会費
+        td 一般：#{workshop.fee.general}#[br]学生：#{workshop.fee.student}#[br]新入生：無料

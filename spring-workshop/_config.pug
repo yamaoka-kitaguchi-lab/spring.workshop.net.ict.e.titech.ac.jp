@@ -1,14 +1,106 @@
-- var base_url = 'https://spring-workshop.net.ict.e.titech.ac.jp'
+- var base_url = 'https://workshop.net.ict.e.titech.ac.jp'
 - var css_path = '/css'
-- var image_path = '/image'
+- var image_path = '/img'
+
 - 
   var meta = {
     title: '.net Spring Workshop 2019 | 東京工業大学 山岡・北口研究室',
     og: {
       type: 'website',
       title: '.net Spring Workshop 2019',
-      description: '春ゼミは東京工業大学山岡・北口研究室の主催するワークショップです。',
+      description: '.net Spring Workshop（通称：春ゼミ）は、東京工業大学山岡・北口研究室の主催する研究ワークショップです。',
       image: image_path + '/OGP.jpg',
       url: base_url
     }
   }
+
+- 
+  var workshop = {
+    year: '2019',
+    date: '2019年3月10日（水）',
+    location: {
+      text: '東京工業大学 大岡山キャンパス 南3号館3階300輪講室（山岡・北口研究室）',
+      url: 'https://www.net.ict.e.titech.ac.jp/access/index.html',
+      googlemap: ''
+    },
+    transport: '東急目黒線大岡山駅より徒歩5分',
+    fee: {
+      general: '時価',
+      student: '1000円'
+    },
+    contact: 'workshop-inquiry@net.ict.e.titech.ac.jp'
+  }
+
+- 
+  var program = [
+    {
+      type: 'nonsession',
+      time: '14:00 ~ 14:20',
+      title: '開式の辞',
+      owner: '山岡 克式'
+    },
+    {
+      type: 'session',
+      time: '14:20 ~ 15:20',
+      title: 'セッション1（新入生の発表）',
+      owner: '座長: 宮 太地, 平井 和樹',
+      session: [
+        {
+          time: '14:20 ~ 14:40',
+          title: '発表タイトル未提出',
+          presenter: '中央 太郎（新・修士1年）',
+        },
+        {
+          time: '14:40 ~ 15:00',
+          title: '発表タイトル未提出',
+          presenter: '理科 太郎（新・修士1年）',
+        },
+        {
+          time: '15:00 ~ 15:20',
+          title: '発表タイトル未提出',
+          presenter: '工学院 太郎（新・博士1年）',
+        }
+      ]
+    },
+    {
+      type: 'nonsession',
+      time: '15:20 ~ 15:30',
+      title: '休憩',
+      owner: ''
+    },
+    {
+      type: 'session',
+      time: '15:30 ~ 16:30',
+      title: 'セッション2',
+      owner: '座長: 平井 和樹, 宮 太地',
+      session: [
+        {
+          time: '15:30 ~ 15:50',
+          title: 'コネクション集約とログ解析による高速なWebコンテンツ配信手法',
+          presenter: '北口 善明',
+        },
+        {
+          time: '15:50 ~ 16:10',
+          title: '機械学習を用いたDNSクエリ/応答ログ解析による悪性端末検出',
+          presenter: '北口 善明',
+        },
+        {
+          time: '16:10 ~ 16:30,
+          title: '発表タイトル未提出',
+          presenter: 'Krittin Intharawijitr',
+        }
+      ]
+    },
+    {
+      type: 'nonsession',
+      time: '16:30 ~ 16:50',
+      title: '閉式の辞',
+      owner: '北口 善明'
+    },
+    {
+      type: 'nonsession',
+      time: '18:00 ~ 21:00',
+      title: '懇親会（新入生歓迎会）',
+      owner: ''
+    }
+  ]
