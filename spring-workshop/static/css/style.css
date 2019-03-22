@@ -3,8 +3,20 @@
   font-weight: 300;
 }
 
+body {
+  background-image: url('/img/tech-chan.jpg');
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 h1, h2, h3, h4 {
   font-weight: 300;
+}
+
+h2 {
+  border-bottom: 2px dashed;
 }
 
 dl#attendance-fee > dt {
