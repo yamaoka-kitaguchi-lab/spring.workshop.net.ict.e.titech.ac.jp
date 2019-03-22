@@ -8,6 +8,7 @@ h1, h2, h3, h4 {
 }
 
 dl#attendance-fee > dt {
+  font-weight: inherit;
   float: left;
 }
 
