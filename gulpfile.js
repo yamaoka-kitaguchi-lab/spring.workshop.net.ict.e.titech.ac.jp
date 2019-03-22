@@ -5,7 +5,7 @@ const rimraf = require('rimraf');
 
 const paths = {
   pug: './spring-workshop/',
-  static: './spring-workshop/static/',
+  statics: './spring-workshop/static/',
   dist: './public/'
 };
 
@@ -22,8 +22,8 @@ gulp.task('pug', () => {
 });
 
 gulp.task('copy', () => {
-  return gulp.src([paths.static + '**/*.*'], {
-    base: paths.static
+  return gulp.src([paths.statics + '**/*.*'], {
+    base: paths.statics
   })
   .pipe(gulp.dest(paths.dist));
 });
@@ -37,17 +37,20 @@ gulp.task('browser-sync', () => {
       index: 'index.html'
     }
   });
-  gulp.watch(paths.dist + '**/*.html', gulp.task('reload'));
-  gulp.watch(paths.dist + '**/*.css', gulp.task('reload'));
-  gulp.watch(paths.dist + '**/*.js', gulp.task('reload'));
+  gulp.watch([paths.dist + '**/*.html'], gulp.task('reload'));
+  gulp.watch([paths.dist + '**/*.css'], gulp.task('reload'));
+  gulp.watch([paths.dist + '**/*.js'], gulp.task('reload'));
 });
 
-gulp.task('reload', () => {
+gulp.task('reload', (done) => {
   browserSync.reload();
+  done();
 });
 
 gulp.task('watch', () => {
   gulp.watch([paths.pug + '**/*.pug'], gulp.task('build'));
+  gulp.watch([paths.pug + '**/*.js'], gulp.task('build'));
+  gulp.watch([paths.pug + '**/*.css'], gulp.task('build'));
 });
 
 gulp.task('default', gulp.series(gulp.parallel('browser-sync', 'watch')));

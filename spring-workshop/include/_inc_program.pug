@@ -1,0 +1,21 @@
+section.my-4
+  h2.mb-3 プログラム
+  p 敬称略
+  
+  each timeslot, idx in program
+    div.row.mt-3.mb-3
+      div.col-sm-2 #{timeslot.time}
+      div.col-sm-7 #{timeslot.title}
+      div.col-sm-3.text-right #{timeslot.owner}
+    case timeslot.type
+      when 'nonsession'
+        unless idx == program.length - 1
+          hr
+      when 'session'
+        div.card.mt-3.mb-3
+          div.card-body
+            each presentation in timeslot.session
+              div.row.my-2
+                div.col-sm-2 #{presentation.time}
+                div.col-sm-7 #{presentation.title}
+                div.col-sm-3.text-right #{presentation.presenter}

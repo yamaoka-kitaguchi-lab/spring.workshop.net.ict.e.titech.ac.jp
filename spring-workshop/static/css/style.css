@@ -1,9 +1,18 @@
-html {
-  font-size: 13px;
-  -ms-overflow-style: scrollbar;
-  -webkit-tap-highlight-color: transparent;
+* {
+  font-family: 'M PLUS 1p', sans-serif;
+  font-weight: 300;
 }
 
-section {
-  margin-bottom: 32px;
+h1, h2, h3, h4 {
+  font-weight: 300;
+}
+
+dl#attendance-fee > dt {
+  font-weight: inherit;
+  float: left;
+}
+
+dl#attendance-fee > dd {
+  margin-bottom: 0;
+  margin-left: 70px;
 }
