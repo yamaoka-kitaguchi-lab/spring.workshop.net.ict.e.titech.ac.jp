@@ -2,23 +2,23 @@ section.my-4
   h2.mb-3 開催案内
   p ワークショップのみ，懇親会のみのご参加も歓迎しています．#[br]何かご不明な点がございましたら，お気軽に#[a(href="mailto:"+workshop.contact) 運営事務局]までお問い合わせください．
   
-  table.table.mb-0
+  table#announce_table.table.mb-0
     tbody
       tr
-        th(scope="row") 日時
+        th(scope="row") #[i.far.fa-calendar-alt.mr-3]日時
         td #{workshop.date} #{workshop.begin} より
       tr
-        th(scope="row") 場所
+        th(scope="row") #[i.fas.fa-map-marker-alt.mr-3]場所
         td
           a(href=workshop.location.url) #{workshop.location.text}
       tr
-        th(scope="row") 交通
+        th(scope="row") #[i.fas.fa-subway.mr-3]交通
         td #{workshop.transport}
       tr
-        th(scope="row") Wi-Fi
+        th(scope="row") #[i.fas.fa-wifi.mr-3]Wi-Fi
         td #{workshop.wifi}
       tr
-        th(scope="row") 懇親会費
+        th(scope="row") #[i.fas.fa-yen-sign.mr-3]懇親会費
         td
           p.mb-1 #{workshop.paying}
           dl#attendance-fee.mb-0

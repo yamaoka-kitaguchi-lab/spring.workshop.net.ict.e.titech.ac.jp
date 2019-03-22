@@ -3,19 +3,19 @@ section.my-4
   p 敬称略
   
   each timeslot, idx in program
-    div.row.mt-3.mb-3
-      div.col-sm-2 #{timeslot.time}
-      div.col-sm-7 #{timeslot.title}
-      div.col-sm-3.text-right #{timeslot.owner}
+    div.row.my-3
+      div.col-sm-2.col-md-2 #{timeslot.time}
+      div.col-sm-10.col-md-5 #{timeslot.title}
+      div.col-sm-12.col-md-5.text-right #{timeslot.owner}
     case timeslot.type
       when 'nonsession'
         unless idx == program.length - 1
           hr
       when 'session'
-        div.card.mt-3.mb-3
-          div.card-body
+        div.card.my-3.bg-transparent
+          div.card-body.bg-transparent
             each presentation in timeslot.session
               div.row.my-2
-                div.col-sm-2 #{presentation.time}
-                div.col-sm-7 #{presentation.title}
-                div.col-sm-3.text-right #{presentation.presenter}
+                div.col-sm-2.col-xl-2 #{presentation.time}
+                div.col-sm-10.col-xl-7.underline #{presentation.title}
+                div.col-sm-12.col-xl-3.text-right #{presentation.presenter}
