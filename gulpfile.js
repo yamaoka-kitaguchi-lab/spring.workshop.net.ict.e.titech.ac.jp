@@ -22,7 +22,7 @@ gulp.task('pug', () => {
 });
 
 gulp.task('copy', () => {
-  return gulp.src([paths.statics + '**/*.*'], {
+  return gulp.src([paths.statics + '**/*'], {
     base: paths.statics
   })
   .pipe(gulp.dest(paths.dist));
