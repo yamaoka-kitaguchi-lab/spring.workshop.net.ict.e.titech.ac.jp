@@ -1,11 +1,12 @@
-section
-  h2 開催案内
-  p 何かご不明な点がございましたら，お気軽に#[a(href="mailto:"+workshop.contact) 開催事務局]までお問い合わせください．
-  table.table
+section.my-4
+  h2.mb-3 開催案内
+  p ワークショップのみ，懇親会のみのご参加も歓迎しています．#[br]何かご不明な点がございましたら，お気軽に#[a(href="mailto:"+workshop.contact) 運営事務局]までお問い合わせください．
+  
+  table.table.mb-0
     tbody
       tr
-        th(scope="row") 日程
-        td #{workshop.date}
+        th(scope="row") 日時
+        td #{workshop.date} #{workshop.begin} より
       tr
         th(scope="row") 場所
         td
@@ -14,8 +15,16 @@ section
         th(scope="row") 交通
         td #{workshop.transport}
       tr
-        th(scope="row") 会場Wi-Fi
+        th(scope="row") Wi-Fi
         td #{workshop.wifi}
       tr
         th(scope="row") 懇親会費
-        td 一般：　#{workshop.fee.general}#[br]学生：　#{workshop.fee.student}#[br]新入生：無料
+        td
+          p.mb-1 #{workshop.paying}
+          dl#attendance-fee.mb-0
+            dt 一般
+            dd #{workshop.fee.general}
+            dt 学生
+            dd #{workshop.fee.student}
+            dt 新入生
+            dd 無料
