@@ -15,20 +15,24 @@ $.getJSON(endpoint)
     const html_url = data[i]['html_url'];
     $('#github_commit_log')
       .append($('<li>')
-        .append($('<span>').addClass('mr-2').text(date.toLocaleString('en',{
-          hour12:false,
-          year:'2-digit',
-          month:'2-digit',
-          day:'2-digit',
-          hour:'2-digit',
-          minute:'2-digit',
-          second:'2-digit'
-        })))
-        .append($('<strong>').text(message))
-        .append(" (")
-        .append($('<a>').addClass('text-muted').attr('href', html_url).text(sha))
-        .append(") ")
-        .append($('<i>').text('by ' + author)))
+        .append($('<span>').addClass('mr-2')
+          .text(date.toLocaleString('en',{
+            hour12:false,
+            year:'2-digit',
+            month:'2-digit',
+            day:'2-digit',
+            hour:'2-digit',
+            minute:'2-digit',
+            second:'2-digit'
+          })))
+        .append($('<br>').addClass('d-sm-none'))
+        .append($('<span>')
+          .append($('<strong>').text(message))
+          .append(" (")
+          .append($('<a>').addClass('text-muted').attr('href', html_url).text(sha))
+          .append(") ")
+          .append($('<br>').addClass('d-sm-none'))
+          .append($('<i>').text('by ' + author))))
   }
   $('#builderror').remove();
 })
