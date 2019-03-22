@@ -1,4 +1,4 @@
-const endpoint = 'https://api.github.com/repos/yamaoka-kitaguchi-lab/spring-workshop/commits';
+const endpoint = 'https://api.github.com/repos/yamaoka-kitaguchi-lab/spring-workshop/commits?path=spring-workshop';
 const max_logs = 5;
 
 $('#builderror').empty();
