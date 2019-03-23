@@ -1,7 +1,7 @@
 const gulp = require('gulp');
 const pug = require('gulp-pug');
 const browserSync = require('browser-sync');
-const rimraf = require('rimraf');
+const del = require('del');
 
 const paths = {
   pug: './spring-workshop/',
@@ -10,7 +10,7 @@ const paths = {
 };
 
 gulp.task('clean', (callback) => {
-  return rimraf(paths.dist, callback);
+  return del([paths.dist + '*']);
 });
 
 gulp.task('pug', () => {
