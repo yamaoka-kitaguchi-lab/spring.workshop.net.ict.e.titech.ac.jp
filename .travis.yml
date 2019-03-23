@@ -4,7 +4,7 @@ node_js:
   - '7'
 
 sudo: false
-cache: npm
+cache: yarn
 
 env:
   global:
@@ -17,11 +17,10 @@ branches:
     - master
 
 before_script:
-  - npm install -g gulp-cli
-  - npm install
+  - yarn
 
 script:
-  - gulp build
+  - yarn run gulp build
 
 deploy:
   provider: pages
