@@ -5,7 +5,7 @@ section#program.my-4
   each timeslot, idx in program
     div.row.my-3
       div.col-sm-2.col-md-2 #{timeslot.time}
-      div.col-sm-10.col-md-5 #{timeslot.title}
+      div.col-sm-10.col-md-5.bold #{timeslot.title}
       div.col-sm-12.col-md-5.text-right #{timeslot.owner}
     case timeslot.type
       when 'nonsession'
@@ -17,8 +17,8 @@ section#program.my-4
             each presentation in timeslot.session
               div.row.my-2
                 div.col-sm-2.col-xl-2 #{presentation.time}
-                div.col-sm-10.col-xl-7.underline #{presentation.title}
+                div.col-sm-10.col-xl-7 #[mark.blue #{presentation.title}]
                 div.col-sm-12.col-xl-3.text-right #{presentation.presenter}
 
   p.text-right
-    a#print_program(role="button" href="") プログラムを印刷する
+    a#print_program(role="button" href="#") プログラムを印刷する
