@@ -3,7 +3,8 @@
 春ゼミ開催案内のWebサイトを管理するリポジトリです．
 
 1. masterブランチ・screenshotブランチは保護されており，強制プッシュはできません
-1. masterブランチへプッシュすると自動でWebサイトがビルド，デプロイされます
+1. masterブランチへローカルの変更を反映するには，プルリクエストを作成する必要があります
+1. プルリクエスト作成時に自動でWebサイトがビルドされ，これが正常に終了した場合のみmasterブランチへのマージとデプロイが行われます
     - **デプロイ先リポジトリ：[yamaoka-kitaguchi-lab/workshop.net.ict.e.titech.ac.jp](https://github.com/yamaoka-kitaguchi-lab/workshop.net.ict.e.titech.ac.jp)**
 
 ![春ゼミトップ・Safariスクリーンショット](https://raw.githubusercontent.com/yamaoka-kitaguchi-lab/spring-workshop/screenshot/safari.png "春ゼミトップ・Safariスクリーンショット")
