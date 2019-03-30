@@ -28,3 +28,10 @@ section#announce.my-4
             dd #{workshop.fee.student}
             dt 新入生
             dd 無料
+      tr
+        th(scope="row") #[i.fas.fa-glass-martini.mr-3]2次会
+        td
+          if workshop.afterparty.url
+            a(href=workshop.afterparty.url) #{workshop.afterparty.text}
+          else
+            p.mb-0 #{workshop.afterparty.text}

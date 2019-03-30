@@ -37,7 +37,7 @@
 #### OGP
 SNS投稿時に表示されるコンテンツの定義です．*title* だけ修正してください．
 ```
-- 
+-
   var og = {
     type: 'website',
     title: '.net Spring Workshop 2019',
@@ -58,10 +58,12 @@ SNS投稿時に表示されるコンテンツの定義です．*title* だけ修
 - *fee.student*: 新入生を除く学生の懇親会参加費
 - *paying*: 参加費の支払い方法
 - *wifi*: 会場のWi-Fi環境
+- *afterparty.text*: 2次会会場
+- *afterparty.url*: 2次会会場に貼り付けるリンクのURL
 - *contact*: 運営事務局のメールアドレス（メールエイリアス発行はnet-rootに依頼してください）
 
 ```
-- 
+-
   var workshop = {
     year: '2019',
     date: '2019年4月10日（水）',
@@ -77,6 +79,10 @@ SNS投稿時に表示されるコンテンツの定義です．*title* だけ修
     },
     paying: '当日会場にて集金いたします（現金・Kyash・PayPay・PayPal）',
     wifi: 'eduroamとWi2が利用できます',
+    afterparty: {
+      text: '現在調整中',
+      url: ''
+    },
     contact: 'workshop-inquiry@net.ict.e.titech.ac.jp'
   }
 ```
@@ -100,7 +106,7 @@ SNS投稿時に表示されるコンテンツの定義です．*title* だけ修
   - *session.presenter*: 発表者名
 
 ```
-- 
+-
   var program = [
     {
       type: 'nonsession',
