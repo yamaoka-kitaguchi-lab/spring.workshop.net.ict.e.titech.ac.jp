@@ -1,6 +1,7 @@
 # .net Spring Workshop（通称：春ゼミ） [![Build Status](https://travis-ci.org/yamaoka-kitaguchi-lab/spring-workshop.svg?branch=master)](https://travis-ci.org/yamaoka-kitaguchi-lab/spring-workshop)
 
 春ゼミ開催案内のWebサイトを管理するリポジトリです．
+過去の開催は[Releases](https://github.com/yamaoka-kitaguchi-lab/spring-workshop/releases)を確認してください．
 
 1. masterブランチ・screenshotブランチは保護されており，強制プッシュはできません
 1. masterブランチへローカルの変更を反映するには，プルリクエストを作成する必要があります
