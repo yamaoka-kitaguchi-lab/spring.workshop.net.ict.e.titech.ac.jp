@@ -1,6 +1,6 @@
 section#announce.my-4
   h2.mb-3 開催案内
-  p ワークショップのみ，懇親会のみのご参加も歓迎しています。#[br]何かご不明な点がございましたら，お気軽に#[a(href="mailto:"+workshop.contact) 運営事務局]までお問い合わせください。
+  p ワークショップのみ，懇親会のみのご参加も歓迎しています。何かご不明な点がございましたら，お気軽に#[a(href="mailto:"+workshop.contact) 運営事務局]までお問い合わせください。
   
   table#announce_table.table.mb-0
     tbody
@@ -10,7 +10,10 @@ section#announce.my-4
       tr
         th(scope="row") #[i.fas.fa-map-marker-alt.mr-3]場所
         td
-          a(href=workshop.location.url) #{workshop.location.text}
+          if workshop.location.url
+            a(href=workshop.location.url) #{workshop.location.text}
+          else
+            p.mb-0 #{workshop.location.text}
       tr
         th(scope="row") #[i.fas.fa-subway.mr-3]交通
         td #{workshop.transport}
