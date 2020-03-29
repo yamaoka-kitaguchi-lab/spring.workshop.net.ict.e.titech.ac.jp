@@ -1,12 +1,17 @@
+![](https://raw.githubusercontent.com/yamaoka-kitaguchi-lab/website/images/logo.png)
+
 # .net Spring Workshop（通称：春ゼミ） [![Build Status](https://travis-ci.org/yamaoka-kitaguchi-lab/spring-workshop.svg?branch=master)](https://travis-ci.org/yamaoka-kitaguchi-lab/spring-workshop) ![Yarn CI](https://github.com/yamaoka-kitaguchi-lab/spring-workshop/workflows/Yarn%20CI/badge.svg)
 
 春ゼミ開催案内のWebサイトを管理するリポジトリです．
 過去の開催は[Releases](https://github.com/yamaoka-kitaguchi-lab/spring-workshop/releases)を確認してください．
 
-1. masterブランチ・screenshotブランチは保護されており，強制プッシュはできません
-1. masterブランチへローカルの変更を反映するには，プルリクエストを作成する必要があります
-1. プルリクエスト作成時に自動でWebサイトがビルドされ，これが正常に終了した場合のみmasterブランチへのマージとデプロイが行われます
-    - **デプロイ先リポジトリ：[yamaoka-kitaguchi-lab/workshop.net.ict.e.titech.ac.jp](https://github.com/yamaoka-kitaguchi-lab/workshop.net.ict.e.titech.ac.jp)**
+1. **master ブランチは保護されています．** 直接プッシュ `git push origin master` はできません
+1. master ブランチへローカルの変更を反映するにはプルリクエストを提出してください．なお，リクエストを承認し master ブランチへマージできるのは net-root チームメンバーのみであり，さらにこれは以下2条件をクリアした場合に限られます:
+    - **プルリクエスト作成時に自動実行されるテストをすべて通過すること**
+    - **net-root によるコードレビューを経ること**
+1. master ブランチへのマージ後，自動でWebサイトがビルドされ成果物がデプロイされます
+
+**コンテンツデプロイ先リポジトリ：[yamaoka-kitaguchi-lab/workshop.net.ict.e.titech.ac.jp](https://github.com/yamaoka-kitaguchi-lab/workshop.net.ict.e.titech.ac.jp)**
 
 ![春ゼミトップ・Safariスクリーンショット](https://raw.githubusercontent.com/yamaoka-kitaguchi-lab/spring-workshop/screenshot/safari.png "春ゼミトップ・Safariスクリーンショット")
 
