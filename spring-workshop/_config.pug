@@ -3,7 +3,7 @@
 - var image_path = '/img'
 - var js_path = '/js'
 
-- var page_title =  '.net Spring Workshop 2019 | 東京工業大学 山岡・北口研究室'
+- var page_title =  '.net Spring Workshop 2020 | 東京工業大学 山岡・北口研究室'
 
 - 
   var og = {
@@ -16,97 +16,102 @@
 
 - 
   var workshop = {
-    year: '2019',
-    date: '2019年4月10日（水）',
-    begin: '14:30',
+    year: '2020',
+    date: '2020年4月14日（火）',
+    begin: '13:00',
     location: {
-      text: '東京工業大学 大岡山キャンパス 南3号館3階300輪講室（山岡・北口研究室）',
-      url: 'https://www.net.ict.e.titech.ac.jp/access/index.html',
+      text: 'オンライン会議室が確保され次第URLを掲載します',
+      url: '',
     },
-    transport: '東急大井町線・目黒線 大岡山駅より徒歩5分',
+    transport: '-',
     fee: {
-      general: '3,000円',
-      student: '2,000円'
+      general: '-',
+      student: '-'
     },
-    paying: '当日会場にて集金いたします（現金・Kyash・PayPay・PayPal）',
-    wifi: 'eduroamとWi2が利用できます',
+    paying: '本年度は懇親会の開催を見送ります',
+    wifi: '-',
     afterparty: {
-      text: '本年度は開催を見送ります',
+      text: '-',
       url: ''
     },
-    contact: 'workshop-inquiry@net.ict.e.titech.ac.jp'
+    contact: 'inquiry@workshop.net.ict.e.titech.ac.jp'
   }
 
 - 
   var program = [
     {
       type: 'nonsession',
-      time: '14:30 ~ 14:50',
+      time: '12:00 ~ 13:00',
+      title: 'オンライン会議室開放・接続テスト',
+      owner: ''
+    },
+    {
+      type: 'nonsession',
+      time: '13:00 ~ 13:20',
       title: '開式の辞',
       owner: '北口 善明'
     },
     {
       type: 'session',
-      time: '14:50 ~ 15:50',
+      time: '13:20 ~ 14:40',
       title: '前半セッション（新入生の発表）',
-      owner: '座長: 宮 太地, 平井 和樹',
+      owner: '座長: 宮 太地',
       session: [
         {
-          time: '14:50 ~ 15:10',
-          title: 'ランダム符号化を用いない一般情報源に対するレート・歪み理論の順定理',
-          presenter: '伊藤 佑樹（新・修士1年）'
+          time: '13:20 ~ 13:40',
+          title: '発表タイトル未提出',
+          presenter: '石橋 拓也（新・修士1年）'
         },
         {
-          time: '15:10 ~ 15:30',
-          title: 'IPv6における不正ルータアドバタイズメントの対策',
-          presenter: '相京 修（新・修士1年）'
+          time: '13:40 ~ 14:00',
+          title: '高パケットロス耐性を持つビデオストリーミングのためのQUICとHTTP/3の拡張',
+          presenter: '小野 輝也（新・修士1年）'
         },
         {
-          time: '15:30 ~ 15:50',
-          title: 'ブロックチェーンを利用して中継行為の記録を行う自律分散型メッセージングシステム',
-          presenter: '市川 博彬（新・博士1年）'
+          time: '14:00 ~ 14:20',
+          title: '発表タイトル未提出',
+          presenter: '内藤 碩治（新・修士1年）'
+        },
+        {
+          time: '14:20 ~ 14:40',
+          title: '逆位相を用いた2チャネル一括OFDM変調における信号品質の測定',
+          presenter: '廣 正博（新・修士1年）'
         }
       ]
     },
     {
       type: 'nonsession',
-      time: '15:50 ~ 16:00',
+      time: '14:40 ~ 14:50',
       title: '休憩',
       owner: ''
     },
     {
       type: 'session',
-      time: '16:00 ~ 17:00',
+      time: '14:50 ~ 15:50',
       title: '後半セッション',
-      owner: '座長: 平井 和樹, 宮 太地',
+      owner: '座長: 伊藤 佑樹',
       session: [
         {
-          time: '16:00 ~ 16:20',
-          title: 'ServiceWorkerによるWeb高速化に関する研究 ―パッケージングと配送経路制御―',
+          time: '14:50 ~ 15:10',
+          title: 'ネットワーク環境に応じたHTTPバージョン選択によるコンテンツロード時間削減',
           presenter: '代理発表: 北口 善明'
         },
         {
-          time: '16:20 ~ 16:40',
-          title: '機械学習を用いたDNSクエリ/応答のログ解析による悪性端末検出手法の提案',
-          presenter: '代理発表: 北口 善明'
+          time: '15:10 ~ 15:30',
+          title: 'HBH最適ファイル配送スケジューリング2リンク拡張の適用領域検討',
+          presenter: '湯田 孟（修士1年）'
         },
         {
-          time: '16:40 ~ 17:00',
-          title: 'Research process: Low-latency network study case',
-          presenter: 'Krittin Intharawijitr（博士3年）'
+          time: '15:30 ~ 15:50',
+          title: '発表タイトル未提出',
+          presenter: '宮 太地（博士1年）'
         }
       ]
     },
     {
       type: 'nonsession',
-      time: '17:00 ~ 17:20',
+      time: '15:50 ~ 16:10',
       title: '閉式の辞',
       owner: '山岡 克式'
-    },
-    {
-      type: 'nonsession',
-      time: '18:00 ~ 22:00',
-      title: '懇親会（新入生歓迎会）',
-      owner: ''
     }
   ]
