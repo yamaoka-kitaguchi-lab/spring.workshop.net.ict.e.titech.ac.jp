@@ -18,7 +18,8 @@
   var workshop = {
     year: '2020',
     date: '2020年4月14日（火）',
-    begin: '12:45',
+    datejs: '20200414',
+    start: '13:00',
     location: {
       text: 'Zoom会議室に参加してください（https://zoom.us/j/982658025）',
       url: 'https://zoom.us/j/982658025',
@@ -41,45 +42,53 @@
   var program = [
     {
       type: 'nonsession',
-      time: '12:00 ~ 12:45',
+      start: '12:00',
+      end: '12:45',
       title: 'オンライン会議室開放',
       owner: ''
     },
     {
       type: 'nonsession',
-      time: '12:45 ~ 13:00',
+      start: '12:45',
+      end: '13:00',
       title: '接続テスト・自己紹介・全体連絡',
-      owner: '宮 太地'
+      owner: ''
     },
     {
       type: 'nonsession',
-      time: '13:00 ~ 13:20',
+      start: '13:00',
+      end: '13:20',
       title: '開式の辞',
       owner: '北口 善明'
     },
     {
       type: 'session',
-      time: '13:20 ~ 14:40',
+      start: '13:20',
+      end: '14:40',
       title: '前半セッション（新入生の発表）',
       owner: '座長: 宮 太地',
       session: [
         {
-          time: '13:20 ~ 13:40',
+          start: '13:20',
+          end: '13:40',
           title: '発表タイトル未提出',
           presenter: '石橋 拓也（新・修士1年）'
         },
         {
-          time: '13:40 ~ 14:00',
+          start: '13:40',
+          end: '14:00',
           title: '高パケットロス耐性を持つビデオストリーミングのためのQUICとHTTP/3の拡張',
           presenter: '小野 輝也（新・修士1年）'
         },
         {
-          time: '14:00 ~ 14:20',
+          start: '14:00',
+          end: '14:20',
           title: '発表タイトル未提出',
           presenter: '内藤 碩治（新・修士1年）'
         },
         {
-          time: '14:20 ~ 14:40',
+          start: '14:20',
+          end: '14:40',
           title: '逆位相を用いた2チャネル一括OFDM変調における信号品質の測定',
           presenter: '廣 正博（新・修士1年）'
         }
@@ -87,28 +96,33 @@
     },
     {
       type: 'nonsession',
-      time: '14:40 ~ 14:50',
+      start: '14:40',
+      end: '14:50',
       title: '休憩',
       owner: ''
     },
     {
       type: 'session',
-      time: '14:50 ~ 15:50',
+      start: '14:50',
+      end: '15:50',
       title: '後半セッション',
       owner: '座長: 伊藤 佑樹',
       session: [
         {
-          time: '14:50 ~ 15:10',
+          start: '14:50',
+          end: '15:10',
           title: 'ネットワーク環境に応じたHTTPバージョン選択によるコンテンツロード時間削減',
           presenter: '大橋 滉也（代理: 北口 善明）'
         },
         {
-          time: '15:10 ~ 15:30',
+          start: '15:10',
+          end: '15:30',
           title: 'HBH最適ファイル配送スケジューリング2リンク拡張の適用領域検討',
           presenter: '湯田 孟（修士1年）'
         },
         {
-          time: '15:30 ~ 15:50',
+          start: '15:30',
+          end: '15:50',
           title: '発表タイトル未提出',
           presenter: '宮 太地（博士1年）'
         }
@@ -116,7 +130,8 @@
     },
     {
       type: 'nonsession',
-      time: '15:50 ~ 16:10',
+      start: '15:50',
+      end: '16:10',
       title: '閉式の辞',
       owner: '山岡 克式'
     }
