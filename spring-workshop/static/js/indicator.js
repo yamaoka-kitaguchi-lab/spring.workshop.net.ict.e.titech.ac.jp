@@ -39,6 +39,9 @@ const indicate = () => {
         $(e).addClass('now-here');
       }
     }
+    if ($slot.length == i + 1 && datetime_e <= datetime) {
+      $slot.removeClass('now-here');
+    }
   });
 }
 
