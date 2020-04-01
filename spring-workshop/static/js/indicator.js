@@ -33,8 +33,12 @@ const indicate = () => {
     const datetime_s = Number(date + start);
     const datetime_e = Number(date + end);
 
-    console.log(datetime_s);
-    console.log(datetime_e);
+    if (datetime_s <= datetime && datetime <= datetime_e) {
+      if (!$(e).hasClass('now-here')) {
+        $slot.removeClass('now-here');
+        $(e).addClass('now-here');
+      }
+    }
   });
 }
 
