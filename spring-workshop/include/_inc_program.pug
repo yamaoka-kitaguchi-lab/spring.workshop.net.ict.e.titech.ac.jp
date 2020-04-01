@@ -3,7 +3,7 @@ section#program.my-4
   p 敬称略
   
   each timeslot, idx in program
-    div.row.my-3(data-start=workshop.datejs+"-"+timeslot.start, data-end=workshop.datejs+"-"+timeslot.end)
+    div.row.my-3.slot(data-date=workshop.datejs, data-start=timeslot.start, data-end=timeslot.end)
       div.col-sm-2.col-md-2 #{timeslot.start} ~ #{timeslot.end}
       div.col-sm-10.col-md-5.bold #{timeslot.title}
       div.col-sm-12.col-md-5.text-right #{timeslot.owner}
@@ -15,7 +15,7 @@ section#program.my-4
         div.card.my-3.bg-transparent
           div.card-body.bg-transparent
             each presentation in timeslot.session
-              div.row.my-2(data-start=workshop.datejs+"-"+presentation.start, data-end=workshop.datejs+"-"+presentation.end)
+              div.row.my-2.slot(data-date=workshop.datejs, data-start=presentation.start, data-end=presentation.end)
                 div.col-sm-2.col-xl-2 #{presentation.start} ~ #{presentation.end}
                 div.col-sm-10.col-xl-7 #[mark.blue #{presentation.title}]
                 div.col-sm-12.col-xl-3.text-right #{presentation.presenter}
