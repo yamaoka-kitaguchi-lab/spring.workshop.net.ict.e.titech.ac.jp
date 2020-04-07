@@ -1,7 +1,7 @@
 ![](https://raw.githubusercontent.com/yamaoka-kitaguchi-lab/website/images/logo.png)
 
 # .net Spring Workshop（通称：春ゼミ）
-[![Build Status](https://travis-ci.org/yamaoka-kitaguchi-lab/spring-workshop.svg?branch=master)](https://travis-ci.org/yamaoka-kitaguchi-lab/spring-workshop) ![GitHub CI/CD](https://github.com/yamaoka-kitaguchi-lab/spring-workshop/workflows/GitHub%20CI/CD/badge.svg) [![](https://img.shields.io/github/issues/yamaoka-kitaguchi-lab/spring-workshop)](https://github.com/yamaoka-kitaguchi-lab/spring-worksop/issues) [![](https://img.shields.io/github/issues-pr/yamaoka-kitaguchi-lab/spring-workshop)](https://github.com/yamaoka-kitaguchi-lab/spring-workshop/pulls)
+[![Build Status](https://travis-ci.org/yamaoka-kitaguchi-lab/spring-workshop.svg?branch=master)](https://travis-ci.org/yamaoka-kitaguchi-lab/spring-workshop) ![GitHub CI/CD](https://github.com/yamaoka-kitaguchi-lab/spring-workshop/workflows/GitHub%20CI/CD/badge.svg) [![](https://img.shields.io/github/issues/yamaoka-kitaguchi-lab/spring-workshop)](https://github.com/yamaoka-kitaguchi-lab/spring-workshop/issues) [![](https://img.shields.io/github/issues-pr/yamaoka-kitaguchi-lab/spring-workshop)](https://github.com/yamaoka-kitaguchi-lab/spring-workshop/pulls)
 
 春ゼミ開催案内のWebサイトを管理するリポジトリです．
 過去の開催は[Releases](https://github.com/yamaoka-kitaguchi-lab/spring-workshop/releases)を確認してください．
