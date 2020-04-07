@@ -26,12 +26,12 @@ jobs:
   publish-docker:
     name: Build and Publish Docker Image to GitHub Package Registry
     runs-on: ubuntu-latest
+    if: github.event_name != 'pull_request'
     steps:
       - uses: actions/checkout@v1
         with:
           fetch-depth: 1
       - uses: elgohr/Publish-Docker-Github-Action@master
-        if: github.event_name != 'pull_request'
         with:
           name: yamaoka-kitaguchi-lab/spring-workshop/spring-workshop-nginx
           username: ${{ secrets.DOCKER_USERNAME }}
