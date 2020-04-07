@@ -1,22 +1,41 @@
 # See: https://github.com/marketplace/actions/github-action-for-yarn
 
-name: build
+name: GitHub CI/CD
 
 on:
   push:
     branches: [ master ]
   pull_request:
-    branches: [ master ]
+    types: [opened, synchronize]
 
 jobs:
   build:
-    name: Build website with Pug
+    name: Generate HTML Files with Pug
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
       - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install
       - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: run gulp build
+  publish-docker:
+    name: Build and Publish Docker Image to GitHub Package Registry
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+      - uses: elgohr/Publish-Docker-Github-Action@master
+        if: github.event_name != 'pull_request'
+        with:
+          name: yamaoka-kitaguchi-lab/spring-workshop/spring-workshop-nginx
+          username: ${{ secret.DOCKER_USERNAME }}
+          password: ${{ secret.DOCKER_PASSWORD }}
+          registry: docker.pkg.github.com
+          snapshot: true
+          tags: "latest"
+
