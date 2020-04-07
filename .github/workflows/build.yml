@@ -25,6 +25,7 @@ jobs:
           cmd: run gulp build
   publish-docker:
     name: Build and Publish Docker Image to GitHub Package Registry
+    needs: build
     runs-on: ubuntu-latest
     if: github.event_name != 'pull_request'
     steps:
