@@ -1,6 +1,6 @@
 # See: https://github.com/marketplace/actions/github-action-for-yarn
 
-name: Yarn CI
+name: build
 
 on:
   push:
