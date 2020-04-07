@@ -6,6 +6,13 @@ name: GitHub CI/CD
 on:
   push:
     branches: [ master ]
+    paths:
+      - '.github/**'
+      - 'spring-workshop/**'
+      - 'Dockerfile'
+      - 'gulpfile.js'
+      - 'nginx.conf'
+      - 'yarn.lock'
   pull_request:
     types: [opened, synchronize]
 
