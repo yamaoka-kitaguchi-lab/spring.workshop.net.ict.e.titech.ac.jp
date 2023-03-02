@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   pug:
     image: node:7-alpine
