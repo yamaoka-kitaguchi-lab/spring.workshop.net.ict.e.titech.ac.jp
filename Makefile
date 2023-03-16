@@ -12,10 +12,6 @@ build:
 web:
 	docker compose up --force-recreate web
 
-.PHONY: watch
-develop:
-	docker compose up --force-recreate watch web
-
 .PHONY: clean
 clean:
 	docker compose kill
