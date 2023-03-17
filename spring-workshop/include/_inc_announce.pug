@@ -1,6 +1,6 @@
 section#announce.my-4
   h2.mb-3 開催案内
-  p ワークショップのみ，懇親会のみのご参加も歓迎しています。何かご不明な点がございましたら，お気軽に#[a(href="mailto:"+workshop.contact) 運営事務局]までお問い合わせください。
+  //- p ワークショップのみ，懇親会のみのご参加も歓迎しています。何かご不明な点がございましたら，お気軽に#[a(href="mailto:"+workshop.contact) 運営事務局]までお問い合わせください。
   
   table#announce_table.table.mb-0
     tbody
@@ -14,27 +14,27 @@ section#announce.my-4
             a(href=workshop.location.url) #{workshop.location.text}
           else
             p.mb-0 #{workshop.location.text}
-      tr
-        th(scope="row") #[i.fas.fa-subway.mr-3]交通
-        td #{workshop.transport}
-      tr
-        th(scope="row") #[i.fas.fa-wifi.mr-3]Wi-Fi
-        td #{workshop.wifi}
-      tr
-        th(scope="row") #[i.fas.fa-yen-sign.mr-3]懇親会費
-        td
-          p.mb-1 #[mark.yellow #{workshop.paying}]
-          dl#attendance-fee.mb-0
-            dt 一般
-            dd #{workshop.fee.general}
-            dt 学生
-            dd #{workshop.fee.student}
-            dt 新入生
-            dd 無料
-      tr
-        th(scope="row") #[i.fas.fa-glass-martini.mr-3]2次会
-        td
-          if workshop.afterparty.url
-            a(href=workshop.afterparty.url) #{workshop.afterparty.text}
-          else
-            p.mb-0 #{workshop.afterparty.text}
+      //- tr
+      //-   th(scope="row") #[i.fas.fa-subway.mr-3]交通
+      //-   td #{workshop.transport}
+      //- tr
+      //-   th(scope="row") #[i.fas.fa-wifi.mr-3]Wi-Fi
+      //-   td #{workshop.wifi}
+      //- tr
+      //-   th(scope="row") #[i.fas.fa-yen-sign.mr-3]懇親会費
+      //-   td
+      //-     p.mb-1 #[mark.yellow #{workshop.paying}]
+      //-     dl#attendance-fee.mb-0
+      //-       dt 一般
+      //-       dd #{workshop.fee.general}
+      //-       dt 学生
+      //-       dd #{workshop.fee.student}
+      //-       dt 新入生
+      //-       dd 無料
+      //- tr
+      //-   th(scope="row") #[i.fas.fa-glass-martini.mr-3]2次会
+      //-   td
+      //-     if workshop.afterparty.url
+      //-       a(href=workshop.afterparty.url) #{workshop.afterparty.text}
+      //-     else
+      //-       p.mb-0 #{workshop.afterparty.text}

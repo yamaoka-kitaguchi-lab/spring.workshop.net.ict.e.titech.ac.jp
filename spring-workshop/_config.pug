@@ -1,138 +1,106 @@
-- var base_url = 'https://workshop.net.ict.e.titech.ac.jp'
-- var css_path = '/css'
-- var image_path = '/img'
-- var js_path = '/js'
+- const base_url = 'https://workshop.net.ict.e.titech.ac.jp'
+- const css_path = '/css'
+- const image_path = '/img'
+- const js_path = '/js'
 
-- var page_title =  '.net Spring Workshop 2020 | 東京工業大学 山岡・北口研究室'
+- let page_title =  '.net Spring Workshop 2023 | 東京工業大学 山岡研究室'
 
 - 
-  var og = {
+  const og = {
     type: 'website',
-    title: '.net Spring Workshop 20',
-    description: '.net Spring Workshop（通称：春ゼミ）は、東京工業大学 山岡・北口研究室の主催する研究ワークショップです。',
+    title: '.net Spring Workshop 23',
+    description: '.net Spring Workshop（通称：春ゼミ）は、東京工業大学 山岡研究室の主催する研究ワークショップです。',
     image: image_path + '/OGP.jpg',
     url: base_url
   }
 
 - 
-  var workshop = {
-    year: '2020',
-    date: '2020年4月14日（火）',
-    datejs: '20200414',
-    start: '13:00',
+  const workshop = {
+    year: '2023',
+    date: '2023年4月7日（金）',
+    datejs: '20230407',
+    start: '14:00',
     location: {
-      text: 'Zoom会議室に参加してください（https://zoom.us/j/982658025）',
-      url: 'https://zoom.us/j/982658025',
+      text: '東京工業大学大岡山キャンパス南3号館300輪講室',
     },
-    transport: '-',
-    fee: {
-      general: '-',
-      student: '-'
-    },
-    paying: '本年度は懇親会の開催を見送ります',
-    wifi: '-',
-    afterparty: {
-      text: '-',
-      url: ''
-    },
-    contact: 'inquiry@workshop.net.ict.e.titech.ac.jp'
+    //- transport: '-',
+    //- fee: {
+    //-   general: '-',
+    //-   student: '-'
+    //- },
+    //- paying: '本年度は懇親会の開催を見送ります',
+    //- wifi: '-',
+    //- afterparty: {
+    //-   text: '-',
+    //-   url: ''
+    //- },
+    //- contact: 'inquiry@workshop.net.ict.e.titech.ac.jp'
   }
 
 - 
-  var program = [
+  const program = [
     {
       type: 'nonsession',
-      start: '12:00',
-      end: '12:45',
-      title: 'オンライン会議室開放',
+      start: '14:00',
+      end: '14:20',
+      title: '自己紹介・全体連絡',
       owner: ''
     },
     {
       type: 'nonsession',
-      start: '12:45',
-      end: '13:00',
-      title: '接続テスト・自己紹介・全体連絡',
-      owner: ''
-    },
-    {
-      type: 'nonsession',
-      start: '13:00',
-      end: '13:20',
+      start: '14:20',
+      end: '14:40',
       title: '開式の辞',
+      //- todo: owner これでOK?
       owner: '北口 善明'
     },
     {
       type: 'session',
-      start: '13:20',
+      start: '14:40',
       end: '14:40',
-      title: '前半セッション（新入生の発表）',
-      owner: '座長: 宮 太地',
+      title: 'セッション',
+      //- todo: owner どうする?
+      owner: '座長: 脇本 和茂',
       session: [
-        {
-          start: '13:20',
-          end: '13:40',
-          title: '低電源電圧・高線型電圧バッファ回路の構成に関する研究',
-          presenter: '石橋 拓也（新・修士1年）'
-        },
-        {
-          start: '13:40',
-          end: '14:00',
-          title: '高パケットロス耐性を持つビデオストリーミングのためのQUICとHTTP/3の拡張',
-          presenter: '小野 輝也（新・修士1年）'
-        },
-        {
-          start: '14:00',
-          end: '14:20',
-          title: '無線ボディエリアネットワークにおけるpolar符号の性能評価',
-          presenter: '内藤 碩治（新・修士1年）'
-        },
-        {
-          start: '14:20',
-          end: '14:40',
-          title: '逆位相を用いた2チャネル一括OFDM変調における信号品質の測定',
-          presenter: '廣 正博（新・修士1年）'
-        }
-      ]
+          {
+            start: '14:40',
+            end: '15:00',
+            title: 'TODO',
+            presenter: '在間 哲平（新・修士1年）'
+          },
+          {
+            start: '15:00',
+            end: '15:20',
+            title: '位置識別子を利用した受信者代弁型情報伝送プロトコル',
+            presenter: '大坪 正樹（修士1年）'
+          },
+          {
+            start: '15:20',
+            end: '15:40',
+            title: '可変ペイロードサイズに対する有限状態数VoIPトラヒックモデル',
+            presenter: '和氣 智慶（修士1年）'
+          }
+        ]
     },
     {
       type: 'nonsession',
-      start: '14:40',
-      end: '14:50',
-      title: '休憩',
+      start: '15:40',
+      end: '16:00',
+      title: '閉会の辞',
+      owner: '山岡 克式'
+    },
+    {
+      type: 'nonsession',
+      start: '16:00',
+      end: '18:00',
+      title: '休憩・買い出し等',
       owner: ''
     },
     {
-      type: 'session',
-      start: '14:50',
-      end: '15:50',
-      title: '後半セッション',
-      owner: '座長: 伊藤 佑樹',
-      session: [
-        {
-          start: '14:50',
-          end: '15:10',
-          title: 'ネットワーク環境に応じたHTTPバージョン選択によるコンテンツロード時間削減',
-          presenter: '大橋 滉也（代理: 北口 善明）'
-        },
-        {
-          start: '15:10',
-          end: '15:30',
-          title: 'HBH最適ファイル配送スケジューリング2リンク拡張の適用領域検討',
-          presenter: '湯田 孟（修士1年）'
-        },
-        {
-          start: '15:30',
-          end: '15:50',
-          title: 'オリエンテーション：情報系の学生らしい研究の進め方',
-          presenter: '宮 太地（博士1年）'
-        }
-      ]
-    },
-    {
-      type: 'nonsession',
-      start: '15:50',
-      end: '16:10',
-      title: '閉式の辞',
-      owner: '山岡 克式'
+       type: 'nonsession',
+      start: '18:00',
+      end: '',
+      title: '新入生歓迎会',
+      owner: ''
     }
   ]

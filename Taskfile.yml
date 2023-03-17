@@ -1,0 +1,26 @@
+# https://taskfile.dev
+
+version: 3
+
+silent: true
+
+tasks:
+  default:
+    cmds:
+      - mkdir -p public/
+      - docker compose up pug
+      - docker compose up -d web
+      - docker compose logs -f web
+  build:
+    cmds:
+      - mkdir -p public/
+      - docker compose up --force-recreate pug
+      - task web
+      - echo -e "\U26A1 \e[33mCheck out http://localhost:8080"
+  web:
+    cmds:
+      - docker compose up --force-recreate -d web
+  clean:
+    cmds:
+      - docker compose down
+      - rm -rf public/

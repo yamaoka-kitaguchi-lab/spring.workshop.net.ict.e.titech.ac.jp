@@ -1,5 +1,6 @@
 .PHONY: default
 default:
+	mkdir -p public/
 	docker compose up pug
 	docker compose up -d web
 	docker compose logs -f web
@@ -10,6 +11,7 @@ build:
 
 .PHONY: web
 web:
+	mkdir -p public/
 	docker compose up --force-recreate web
 
 .PHONY: clean

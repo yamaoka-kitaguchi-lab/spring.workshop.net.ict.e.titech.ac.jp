@@ -23,10 +23,10 @@
 % yarn run gulp build
 % yarn run gulp
 ```
-あるいは，ローカルに [NodeJS](https://nodejs.org/en/) 環境が整っていない場合は，[docker-compose](https://docs.docker.com/compose/) でビルドすることもできます．
+あるいは，ローカルに [NodeJS](https://nodejs.org/en/) 環境が整っていない場合は，[docker compose](https://docs.docker.com/compose/) でビルドすることもできます．
 ```
-% docker-compose up --force-recreate pug
-% docker-compose up --force-recreate web watch
+% docker compose up --force-recreate pug
+% docker compose up --force-recreate web watch
 ```
 
 ## 年次更新の手順
