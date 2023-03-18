@@ -5,14 +5,14 @@ name: GitHub CI/CD
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
     paths:
-      - '.github/**'
-      - 'spring-workshop/**'
-      - 'Dockerfile'
-      - 'gulpfile.js'
-      - 'nginx.conf'
-      - 'yarn.lock'
+      - ".github/**"
+      - "spring-workshop/**"
+      - "Dockerfile"
+      - "gulpfile.js"
+      - "nginx.conf"
+      - "yarn.lock"
   pull_request:
     types: [opened, synchronize]
 
@@ -21,30 +21,31 @@ jobs:
     name: Generate HTML Files with Pug
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 1
-      - uses: borales/actions-yarn@v2.0.0
+      - uses: actions/setup-node@v3
         with:
-          cmd: install
-      - uses: borales/actions-yarn@v2.0.0
-        with:
-          cmd: run gulp build
-      - uses: actions/upload-artifact@v1
+          node-version: 18
+          cache: yarn
+      - run: yarn install
+      - run: yarn run gulp build
+      - uses: actions/upload-artifact@v3
         if: github.event_name != 'pull_request'
         with:
           name: pug-build-artifacts
           path: public
+
   publish-docker:
     name: Build and Publish Docker Image to GitHub Package Registry
     needs: build
     runs-on: ubuntu-latest
     if: github.event_name != 'pull_request'
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 1
-      - uses: actions/download-artifact@v1
+      - uses: actions/download-artifact@v3
         with:
           name: pug-build-artifacts
           path: public
@@ -56,4 +57,3 @@ jobs:
           registry: docker.pkg.github.com
           snapshot: true
           tags: "latest"
-
