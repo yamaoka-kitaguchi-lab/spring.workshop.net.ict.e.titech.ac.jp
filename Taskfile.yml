@@ -15,9 +15,9 @@ tasks:
     cmds:
       - mkdir -p public/
       - docker compose up --force-recreate pug
-      - task web
+      - task _web
       - echo -e "\U26A1 \e[33mCheck out http://localhost:8080"
-  web:
+  _web:
     cmds:
       - docker compose up --force-recreate -d web
   clean:
