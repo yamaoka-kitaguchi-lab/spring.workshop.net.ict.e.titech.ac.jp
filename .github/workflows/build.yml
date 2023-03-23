@@ -5,7 +5,7 @@ name: GitHub CI/CD
 
 on:
   push:
-    branches: [master]
+    branches: [main]
     paths:
       - ".github/**"
       - "spring-workshop/**"
@@ -20,6 +20,9 @@ jobs:
   build:
     name: Generate HTML Files with Pug
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v3
         with:
@@ -30,30 +33,9 @@ jobs:
           cache: yarn
       - run: yarn install
       - run: yarn run gulp build
-      - uses: actions/upload-artifact@v3
-        if: github.event_name != 'pull_request'
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
         with:
-          name: pug-build-artifacts
-          path: public
-
-  publish-docker:
-    name: Build and Publish Docker Image to GitHub Package Registry
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.event_name != 'pull_request'
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 1
-      - uses: actions/download-artifact@v3
-        with:
-          name: pug-build-artifacts
-          path: public
-      - uses: elgohr/Publish-Docker-Github-Action@master
-        with:
-          name: yamaoka-kitaguchi-lab/spring-workshop/spring-workshop-nginx
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
-          registry: docker.pkg.github.com
-          snapshot: true
-          tags: "latest"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
