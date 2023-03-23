@@ -1,0 +1,93 @@
+* {
+  font-family: 'M PLUS 1p', sans-serif;
+  font-weight: 300;
+}
+
+body {
+  background-image: url('/img/tech-chan.jpg');
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+.display-6 {
+  font-size: 2.2rem;
+}
+
+.alert-danger {
+  color: #e36270;
+}
+
+div.alert-danger >a, div.alert-danger > p > a {
+  color: #e36270;
+  border-bottom: 1px dotted;
+}
+
+div.alert-danger >a:hover, div.alert-danger > p > a:hover {
+  text-decoration: none;
+  font-weight: 400;
+  border-bottom: 2px dotted;
+}
+
+.now-here {
+  border: 2px dashed #e9848f;
+  border-radius: .25rem;
+  padding: 15px 0 15px 0;
+}
+
+h2 {
+  border-bottom: 2px dashed;
+}
+
+mark {
+  padding: 0;
+  font-weight: 400;
+}
+
+mark.yellow {
+  background: linear-gradient(rgba(255,255,255,0) 65%, rgba(255,255,169,0.4) 65%);
+}
+
+mark.blue {
+  background: linear-gradient(rgba(255,255,255,0) 65%, rgba(194,224,255,0.4) 65%);
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.bold {
+  font-weight: 400;
+}
+
+table#announce_table > tbody > tr > th {
+  padding-right: 0;
+  min-width: 110px;
+}
+
+dl#attendance-fee > dt {
+  font-weight: inherit;
+  float: left;
+}
+
+dl#attendance-fee > dd {
+  margin-bottom: 0;
+  margin-left: 70px;
+}
