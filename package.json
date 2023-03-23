@@ -6,17 +6,17 @@
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yamaoka-kitaguchi-lab/spring-workshop.git"
+    "url": "git+https://github.com/yamaoka-kitaguchi-lab/spring.workshop.net.ict.e.titech.ac.jp.git"
   },
   "author": "Taichi MIYA",
   "bugs": {
-    "url": "https://github.com/yamaoka-kitaguchi-lab/spring-workshop/issues"
+    "url": "https://github.com/yamaoka-kitaguchi-lab/spring.workshop.net.ict.e.titech.ac.jp/issues"
   },
   "scripts": {
     "build": "gulp build",
     "dev": "gulp"
   },
-  "homepage": "https://workshop.net.ict.e.titech.ac.jp/",
+  "homepage": "https://spring.workshop.net.ict.e.titech.ac.jp/",
   "devDependencies": {
     "del": "^4.1.1",
     "gulp-cli": "^2.3.0"
